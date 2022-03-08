@@ -60,7 +60,7 @@ public class RechercheTableauTrieTest {
     }
 
     @Test
-    public void Moitie1NOnOK(){
+    public void Moitie1NonOK(){
         int[] t={1,3,5};
         int x=2;
         boolean res=rtt.rechercheDico(t,x);
@@ -85,5 +85,19 @@ public class RechercheTableauTrieTest {
         boolean attendu=false;
         Assert.assertEquals(res,attendu);
     }
+
+
+    //pas rentrer dans le while
+    // tab vide
+    @Test
+    public void TabVide(){
+        int[] t={};
+        int x=1;
+        boolean res = rtt.rechercheDico(t,x);
+        boolean attendu=false;
+        Assert.assertEquals(res,attendu);
+    }
+
+
 }
 
