@@ -18,6 +18,14 @@ public class Magasin {
            this.stock.addAll(Arrays.asList(produits));
        }
 
+    public Collection<Produit> getStock() {
+        return stock;
+    }
+
+    public void setStock(Collection<Produit> stock) {
+        this.stock = stock;
+    }
+
     public void solder() throws ReductionImpossibleException {
 
        this.stock.stream().forEach( p -> {
